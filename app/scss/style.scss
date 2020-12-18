@@ -37,6 +37,7 @@ $light: #ffffff;
   background-color: transparent;
   color: $blue;
   transition: 0.2s;
+
   &:active {
     background-color: $darkSky;
     color: $light;
@@ -49,15 +50,30 @@ $light: #ffffff;
   border-color: $yellow;
   background-color: $yellow;
   color: $light;
+  font-weight: 700;
+
   &:active {
     background-color: $darkYellow;
     border-color: transparent;
   }
 }
 
+@mixin title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 54px;
+  color: $dark;
+}
+
 //Style
 * {
   box-sizing: border-box;
+}
+
+p,
+h1,
+h3 {
+  margin: 0;
 }
 
 img {
@@ -72,7 +88,7 @@ img {
 
 body {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 26px;
   color: $gray;
   font-size: 16px; // typography base for rem
@@ -81,6 +97,7 @@ body {
 .header {
   margin-top: 16px;
   margin-bottom: 50px;
+
   &__inner {
     @include flexbase;
   }
@@ -88,13 +105,16 @@ body {
 
 .menu {
   margin-left: auto;
+
   &__list {
     @include flexbase;
     @include list;
     font-size: 0.875rem;
+
     &-item + &-item {
       margin-left: 24px;
     }
+
     &-link {
       @include links;
       &:hover,
@@ -109,10 +129,12 @@ body {
 .user-nav {
   margin-left: 50px;
   margin-right: 12px;
+
   &__link {
     font-weight: 600;
     @include btn;
   }
+
   &__link + &__link {
     @include btn-primary;
     margin-left: 10px;
@@ -128,8 +150,10 @@ body {
   padding: 133px 0 80px 0;
   background: url(../img/welcome.svg) no-repeat;
   background-position: bottom right;
+
   &-content {
     flex-basis: 42%;
+
     .title {
       font-size: 2.75rem;
       line-height: 54px;
@@ -137,9 +161,11 @@ body {
       font-weight: 700;
       margin-bottom: 30px;
     }
+
     .desc {
       font-size: 1.125rem;
       margin-bottom: 45px;
+      font-weight: 400;
     }
   }
 }
@@ -148,11 +174,14 @@ body {
   &__link {
     @include btn-primary;
     margin-right: 42px;
+    padding: 14px 41px;
   }
+
   &__link-video {
     color: $yellow;
     font-weight: 600;
     position: relative;
+
     &:before {
       content: "";
       position: absolute;
@@ -163,6 +192,50 @@ body {
       height: 19px;
       background: url(../img/video.svg) no-repeat;
       padding-left: 30px;
+    }
+  }
+}
+
+.tools__inner {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 90px;
+  background: url("../img/bg.svg") no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  .title {
+    @include title;
+    max-width: 539px;
+    margin: 0 auto 54px;
+  }
+
+  .cta {
+    @include btn-primary;
+    padding: 14px 32px;
+  }
+
+  &-box {
+    @include flexbase;
+    align-items: flex-start;
+    margin: 0 12px 36px 12px;
+  }
+
+  &-icon {
+    margin-bottom: 20px;
+  }
+
+  &-item {
+    flex-basis: 20%;
+    /* padding-top: 80px; */
+    text-align: initial;
+
+    .subtitle {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 33px;
+      color: $dark;
+      margin-bottom: 13px;
     }
   }
 }
