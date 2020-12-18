@@ -239,3 +239,66 @@ body {
     }
   }
 }
+
+.direction {
+  margin-top: 120px;
+
+  .big-img {
+    max-width: 520px;
+  }
+}
+
+.direction__inner-box {
+  @include flexbase;
+  margin-bottom: 100px;
+}
+
+.box__text {
+  flex-basis: 45%;
+
+  &-title {
+    @include title;
+    margin-bottom: 22px;
+  }
+
+  &-subtitle {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: $gray;
+    font-weight: 500;
+  }
+
+  &-desc {
+    margin-bottom: 30px;
+  }
+
+  &__item + &__item {
+    margin-top: 25px;
+  }
+
+  &__item {
+    &-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: $dark;
+    }
+  }
+
+  &__item__flex + &__item__flex {
+    margin-top: 30px;
+  }
+
+  &__item__flex {
+    @include flexbase;
+    justify-content: flex-start;
+
+    &-icon {
+      margin-right: 30px;
+    }
+    &-desc {
+      flex-basis: 75%;
+    }
+  }
+}
