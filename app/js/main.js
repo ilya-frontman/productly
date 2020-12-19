@@ -1,12 +1,16 @@
 'use strict';
 
-const text = document.querySelector('p');
-const btn = document.querySelector('button');
-
-btn.addEventListener('click', () => {
-  if (text.classList.contains('red')) {
-    text.classList.remove('red');
-  } else {
-    text.classList.add('red');
-  }
+const slider = tns({
+    "container": '.blog__slider',
+    "items": 3,
+    "slideBy": 1,
+    "startIndex": 0,
+    "mouseDrag": true,
+    "swipeAngle": false,
+    "speed": 400,
+    "controls": false,
+    "navPosition": 'bottom',
+    "navAsThumbnails": true,
+    "mouseDrag": true,
+    "edgePadding": 0
 });

@@ -11,6 +11,7 @@ $darkSky: #9daebf;
 $blue: #173a56;
 $altBlue: #567592;
 $light: #ffffff;
+$dot: #efefef;
 
 //Mixins
 @mixin flexbase {
@@ -456,6 +457,85 @@ body {
       &-five {
         top: -40px;
         left: 0;
+      }
+    }
+  }
+}
+
+.blog {
+  padding: 80px 0 120px 0;
+
+  .tns-item[aria-hidden="true"] + .tns-item {
+    .blog__post-title {
+      color: $yellow;
+    }
+  }
+
+  .tns-nav {
+    display: flex;
+    justify-content: center;
+
+    button.tns-nav-active {
+      background-color: $yellow;
+    }
+
+    button {
+      width: 16px;
+      height: 16px;
+      border: transparent;
+      background-color: $dot;
+      border-radius: 50%;
+    }
+
+    button + button {
+      margin-left: 10px;
+    }
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 9px;
+  }
+
+  &__desc {
+    margin-bottom: 55px;
+  }
+
+  &__slider {
+    padding-bottom: 57px;
+    @include flexbase;
+    align-items: flex-start;
+  }
+
+  &__post {
+    max-width: 348px;
+
+    #post-author {
+      @include links;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+    }
+
+    &-info {
+      margin-bottom: 12px;
+    }
+
+    &-cover {
+      max-width: inherit;
+      border-radius: 8px 8px 0px 0px;
+      object-fit: cover;
+      margin-bottom: 25px;
+    }
+
+    &-title {
+      @include title;
+      font-size: 1.5rem;
+      line-height: 2.125rem;
+      max-width: 312px;
+      & > a {
+        @include links;
+        color: inherit;
       }
     }
   }
