@@ -14,3 +14,11 @@ const slider = tns({
     "mouseDrag": true,
     "edgePadding": 0
 });
+
+// footer input mask
+const tel = document.querySelector('.footer__menu__user-input');
+
+const phone_mask = Maska.create(tel, {
+  tokens: { '#': { pattern: /[0-9]/ }},
+  mask: '+# (###) ### ## ##',
+});

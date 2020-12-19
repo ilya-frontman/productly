@@ -131,11 +131,6 @@ $input: #45525f;
   color: $sky;
   border-radius: 4px;
   padding: 12px 15px 12px;
-  &::focus,
-  &::active {
-    border-color: $input;
-    color: $input;
-  }
 }
 
 //Style
@@ -594,6 +589,10 @@ body {
       @include input;
       display: block;
       margin-bottom: 21px;
+      &::focus {
+        border-color: $input;
+        color: $input;
+      }
     }
     &-btn {
       @include btn-primary;
