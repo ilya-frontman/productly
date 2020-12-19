@@ -15,6 +15,7 @@ const del           = require('del');
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/tiny-slider/dist/tiny-slider.js',
     'app/js/main.js'
   ])
     .pipe(babel({
@@ -57,6 +58,7 @@ function images() {
 function styles() {
   return src([
         './node_modules/normalize.css/normalize.css',
+        './node_modules/tiny-slider/dist/tiny-slider.css',
         './app/scss/style.scss'
       ])
       .pipe(scss({ outputStyle: "compressed" }))
