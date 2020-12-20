@@ -62,6 +62,7 @@ function styles() {
         './node_modules/normalize.css/normalize.css',
         './node_modules/tiny-slider/dist/tiny-slider.css',
         './node_modules/plyr/dist/plyr.css',
+        './node_modules/hamburgers/_sass/**/*.scss',
         './app/scss/style.scss'
       ])
       .pipe(scss({ outputStyle: "compressed" }))
