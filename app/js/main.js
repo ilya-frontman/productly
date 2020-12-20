@@ -43,3 +43,19 @@ close.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
+
+//Mobile menu
+const toggle = document.querySelector('#toggle');
+const nav = document.querySelector('.menu__mobile__box');
+
+toggle.addEventListener('click', (e) => {
+  const target = e.target.closest('#toggle');
+
+  if (toggle.classList.contains('is-active')) {
+    toggle.classList.remove('is-active');
+    nav.style.display = 'none';
+  } else {
+    toggle.classList.add('is-active');
+    nav.style.display = 'block';
+  }
+})

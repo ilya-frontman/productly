@@ -639,3 +639,117 @@ body {
     width: 640px;
   }
 }
+
+.toggle {
+  @include flexbase;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  cursor: pointer;
+  & > span {
+    display: block;
+    height: 2px;
+    width: inherit;
+    background: $dark;
+    position: absolute;
+
+    &::before {
+      content: "";
+      width: inherit;
+      height: 2px;
+      background: $dark;
+      display: block;
+      position: absolute;
+      top: -6px;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      width: inherit;
+      height: 2px;
+      background: $dark;
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 0;
+    }
+  }
+}
+
+.menu__mobile {
+  @include flexbase;
+  width: 100%;
+  justify-content: flex-end;
+  position: relative;
+
+  &__box {
+    width: 320px;
+    background: #1a1a1a;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+
+    &__list {
+      @include list;
+      @include flexbase;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 30px;
+      padding: 0 32px 0;
+      &-item {
+        margin-left: 0;
+        padding: 12px 0;
+      }
+      &-link {
+        @include links;
+        color: $light;
+        font-weight: 18px;
+      }
+    }
+
+    &-user-nav {
+      @include flexbase;
+      justify-content: flex-start;
+      padding: 0 32px 0;
+
+      &__link {
+        @include btn;
+        font-weight: 500;
+        color: $sky;
+        padding: 8px 22px;
+        & + & {
+          @include btn-primary;
+          font-weight: 500;
+          margin-left: 8px;
+          padding: 8px 22px;
+        }
+      }
+    }
+  }
+}
+
+#toggle,
+.menu__mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  #toggle,
+  .menu__mobile {
+    display: block;
+  }
+  .header__inner {
+    padding-top: 20px;
+    @include flexbase;
+    flex-wrap: wrap;
+  }
+  .menu__list,
+  .user-nav {
+    display: none;
+  }
+}
