@@ -17,6 +17,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/tiny-slider/dist/tiny-slider.js',
     'node_modules/maska/dist/maska.js',
+    'node_modules/plyr/dist/plyr.js',
     'app/js/main.js'
   ])
     .pipe(babel({
@@ -60,6 +61,7 @@ function styles() {
   return src([
         './node_modules/normalize.css/normalize.css',
         './node_modules/tiny-slider/dist/tiny-slider.css',
+        './node_modules/plyr/dist/plyr.css',
         './app/scss/style.scss'
       ])
       .pipe(scss({ outputStyle: "compressed" }))
