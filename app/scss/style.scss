@@ -609,13 +609,32 @@ body {
   overflow: hidden;
   overflow-y: hidden;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   z-index: 1;
-  &-video {
-    width: 864px;
-    height: 464px;
+  display: none;
+
+  &__inner {
+    @include flexbase;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 124px auto 0 auto;
+  }
+
+  &__inner-video {
+    width: 640px;
+    height: 360px;
     background: #fff;
     z-index: 2;
-    margin: 172px auto 0 auto;
+    &--content {
+      width: inherit;
+      height: inherit;
+      border: transparent;
+    }
+  }
+  &__inner-closer {
+    width: 48px;
+    height: 48px;
+    background: url("../img/closer.svg") no-repeat;
+    cursor: pointer;
   }
 }
