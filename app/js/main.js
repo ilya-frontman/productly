@@ -1,5 +1,6 @@
 'use strict';
 
+//FOOTER Input mask
 const slider = tns({
     "container": '.blog__slider',
     "items": 3,
@@ -15,7 +16,6 @@ const slider = tns({
     "edgePadding": 0
 });
 
-// footer input mask
 const tel = document.querySelector('.footer__menu__user-input');
 
 const phone_mask = Maska.create(tel, {
@@ -23,8 +23,12 @@ const phone_mask = Maska.create(tel, {
   mask: '+# (###) ### ## ##',
 });
 
-//modal video
 
+// VIDEO PLAYER
+const player = new Plyr(document.querySelector('#player'));
+
+
+//MODAL Video
 const open = document.querySelector('.cta__link-video');
 const close = document.querySelector('.modal__box__inner-closer');
 const modal = document.querySelector('.modal__box');
@@ -35,9 +39,7 @@ open.addEventListener('click', (e) => {
 });
 
 close.addEventListener('click', () => {
+  player.pause();
   modal.style.display = 'none';
 });
 
-// VIDEO PLAYER
-
-const player = new Plyr(document.querySelector('#player'));
