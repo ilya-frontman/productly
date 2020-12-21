@@ -817,10 +817,15 @@ body {
     font-size: 1.6rem;
     line-height: 2rem;
   }
+  .tools__inner .cta {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 390px) {
-  .cta {
+  .offer .cta {
     &__link {
       padding: 12px 20px;
       font-size: 16px;
@@ -830,6 +835,12 @@ body {
 
   .tools__inner-item .subtitle {
     font-size: 1.25rem;
+  }
+
+  .tools__inner .cta {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 400;
   }
 
   .offer__inner-content .title,
