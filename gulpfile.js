@@ -17,7 +17,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/tiny-slider/dist/tiny-slider.js',
     'node_modules/maska/dist/maska.js',
-    'node_modules/plyr/dist/plyr.js',
+    'node_modules/plyr/dist/plyr.polyfilled.js',
     'app/js/main.js'
   ])
     .pipe(babel({
