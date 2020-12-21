@@ -1,7 +1,0 @@
-package-lock.json
-/node_modules/
-/dist/
-app/css/*
-.vscode/*
-app/js/main.min.js
-debug.log
