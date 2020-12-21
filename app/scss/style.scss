@@ -752,6 +752,11 @@ body {
 @media (max-width: 1080px) {
   .offer__inner {
     background: none;
+    &-content {
+      margin: 0 auto;
+      text-align: center;
+      padding: 60px 15px 80px 15px;
+    }
   }
 }
 
@@ -766,6 +771,10 @@ body {
     &-box {
       justify-content: center;
     }
+  }
+
+  .offer__inner-content .desc {
+    text-align: initial;
   }
 
   .direction__inner-box {
@@ -830,6 +839,12 @@ body {
 }
 
 @media (max-width: 520px) {
+  .offer__inner {
+    &-content {
+      text-align: initial;
+    }
+  }
+
   .offer__inner-content .title {
     font-size: 2rem;
     line-height: 2.2rem;
@@ -867,7 +882,18 @@ body {
       padding: 12px 20px;
       font-size: 16px;
       font-weight: 400;
+      margin-right: 36px;
     }
+  }
+
+  .offer__inner {
+    padding: 0;
+  }
+
+  .offer__inner-content .desc {
+    font-size: 1rem;
+    margin-bottom: 45px;
+    font-weight: 400;
   }
 
   .tools__inner-item .subtitle {
