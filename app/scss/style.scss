@@ -492,6 +492,9 @@ body {
   .tns-nav {
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 20px;
+    padding: 10px 0;
 
     button.tns-nav-active {
       background-color: $yellow;
@@ -502,7 +505,7 @@ body {
       height: 16px;
       border: transparent;
       background-color: $dot;
-      border-radius: 100%;
+      border-radius: 50%;
     }
 
     button + button {
@@ -647,44 +650,6 @@ body {
   }
 }
 
-.toggle {
-  @include flexbase;
-  flex-direction: column;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  position: relative;
-  cursor: pointer;
-  & > span {
-    display: block;
-    height: 2px;
-    width: inherit;
-    background: $dark;
-    position: absolute;
-
-    &::before {
-      content: "";
-      width: inherit;
-      height: 2px;
-      background: $dark;
-      display: block;
-      position: absolute;
-      top: -6px;
-      left: 0;
-    }
-    &::after {
-      content: "";
-      width: inherit;
-      height: 2px;
-      background: $dark;
-      display: block;
-      position: absolute;
-      top: 6px;
-      left: 0;
-    }
-  }
-}
-
 .menu__mobile {
   @include flexbase;
   width: 100%;
@@ -770,15 +735,16 @@ body {
   .footer__menu {
     &__logo {
       width: 100%;
+      margin-bottom: 42px;
     }
     &-box {
-      padding: 0 15px;
+      padding: 0;
       & + & {
         margin-left: 25px;
       }
     }
     &__user {
-      flex-basis: 50%;
+      padding: 0;
     }
   }
 }
@@ -825,7 +791,6 @@ body {
   .footer__menu {
     &__logo {
       width: 100%;
-      margin-bottom: 42px;
     }
   }
 }
@@ -889,11 +854,12 @@ body {
       order: 1;
       width: 100%;
       margin-bottom: 42px;
+      padding: 0;
     }
 
     &-box {
       order: 2;
-      padding: 0 15px;
+      padding: 0 15px 0 0;
       & + & {
         margin-left: 25px;
       }
@@ -926,6 +892,9 @@ body {
 }
 
 @media (max-width: 520px) {
+  .menu__mobile__box {
+    width: 100%;
+  }
   .modal__box__inner {
     margin-top: calc(100% - 50%);
   }
@@ -981,6 +950,10 @@ body {
     font-weight: 400;
   }
 
+  .box__text__item-desc {
+    font-size: 14px;
+  }
+
   .direction__inner-box .box__text {
     flex-basis: 100%;
   }
@@ -988,7 +961,7 @@ body {
   .box__text__item,
   .box__text-desc,
   .box__text__list-item {
-    width: auto;
+    width: calc(100% - 17%);
   }
 
   .box__text-title {
