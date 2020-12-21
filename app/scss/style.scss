@@ -220,7 +220,7 @@ body {
   background-position: bottom right;
 
   &-content {
-    flex-basis: 42%;
+    width: 490px;
 
     .title {
       font-size: 2.75rem;
@@ -683,6 +683,7 @@ body {
   width: 100%;
   justify-content: flex-end;
   position: relative;
+  z-index: 1;
 
   &__box {
     width: 320px;
@@ -738,6 +739,18 @@ body {
   display: none;
 }
 
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #3b3b3b;
+}
+
+@media (max-width: 1080px) {
+  .offer__inner {
+    background: none;
+  }
+}
+
 @media (max-width: 900px) {
   #toggle,
   .menu__mobile {
@@ -751,5 +764,49 @@ body {
   .menu__list,
   .user-nav {
     display: none;
+  }
+  .offer__inner {
+    padding: 60px 0 80px 0;
+  }
+  .header {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 590px) {
+  .cta {
+    &__link {
+      padding: 12px 32px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .offer__inner-content {
+    .title {
+      font-size: 2rem;
+      line-height: 2.2rem;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .cta {
+    &__link {
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .offer__inner-content {
+    .title {
+      font-size: 1.7rem;
+      line-height: 2.1rem;
+    }
+    .desc {
+      font-size: 1.02rem;
+      margin-bottom: 45px;
+      font-weight: 400;
+    }
   }
 }
