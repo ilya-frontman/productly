@@ -10,6 +10,7 @@ const babel         = require('gulp-babel');
 const autoprefixer  = require('gulp-autoprefixer');
 const imagemin      = require('gulp-imagemin');
 const del           = require('del');
+const gitPages      = require('gulp-gh-pages');
 
 
 function scripts() {
@@ -93,6 +94,15 @@ function watching() {
   watch(['./app/*.html']).on('change', browserSync.reload);
 }
 
+function deploy() {
+  return src('./dist/**/*')
+      .pipe(gitPages({
+        options: [{
+          branch: 'master',
+          force: true,
+        }]
+      }))
+}
 
 exports.styles = styles;
 exports.watching = watching;
@@ -100,7 +110,8 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.gitPages = gitPages;
 
 exports.build = series(cleanDist, images, build);
-
+exports.deploy = deploy;
 exports.default = parallel(styles, scripts, browsersync, watching);
