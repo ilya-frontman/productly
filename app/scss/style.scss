@@ -838,6 +838,9 @@ body {
 }
 
 @media (max-width: 590px) {
+  .team {
+    padding: 120px 0 120px 0;
+  }
   .cta {
     &__link {
       padding: 12px 32px;
@@ -907,6 +910,18 @@ body {
 }
 
 @media (max-width: 390px) {
+  .team {
+    padding: 100px 0 100px 0;
+  }
+
+  .direction__inner-box {
+    .box__text-desc,
+    .box__text__list-item,
+    .box__text__item-desc {
+      font-size: 14px;
+    }
+  }
+
   .team {
     .team__box {
       &-title {
