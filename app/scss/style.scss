@@ -760,7 +760,17 @@ body {
   }
 }
 
+@media (max-width: 1000px) {
+  .team .team__inner {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
+  .team {
+    padding: 160px 0 160px 0;
+  }
+
   .tools__inner {
     &-item {
       text-align: center;
@@ -836,9 +846,29 @@ body {
   .direction__inner-box .big-img {
     max-width: 70%;
   }
+  .box__text__list-item {
+    max-width: 95%;
+  }
 }
 
 @media (max-width: 520px) {
+  .team {
+    .team__box {
+      &-title {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+      &-desc {
+        max-width: 432px;
+      }
+      &-link {
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+
   .offer__inner {
     &-content {
       text-align: initial;
@@ -877,6 +907,15 @@ body {
 }
 
 @media (max-width: 390px) {
+  .team {
+    .team__box {
+      &-title {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+      }
+    }
+  }
+
   .offer .cta {
     &__link {
       padding: 12px 20px;
