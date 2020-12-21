@@ -1,9 +1,8 @@
 'use strict';
 
-//FOOTER Input mask
 const slider = tns({
     "container": '.blog__slider',
-    "items": 3,
+    "items": 1,
     "slideBy": 1,
     "startIndex": 0,
     "mouseDrag": true,
@@ -13,9 +12,24 @@ const slider = tns({
     "navPosition": 'bottom',
     "navAsThumbnails": true,
     "mouseDrag": true,
-    "edgePadding": 0
+    "edgePadding": 0,
+    "responsive": {
+      820: {
+        gutter: 10,
+        items: 2
+      },
+      720: {
+        gutter: 10,
+        items: 2
+      },
+      900: {
+        items: 3
+      }
+      
+    }
 });
 
+//FOOTER Input mask
 const tel = document.querySelector('.footer__menu__user-input');
 
 const phone_mask = Maska.create(tel, {
@@ -39,7 +53,7 @@ open.addEventListener('click', (e) => {
 });
 
 close.addEventListener('click', () => {
-  player.pause();
+  player.stop();
   modal.style.display = 'none';
 });
 
