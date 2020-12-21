@@ -4,3 +4,4 @@ package-lock.json
 app/css/*
 .vscode/*
 app/js/main.min.js
+debug.log
