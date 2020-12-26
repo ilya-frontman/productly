@@ -15,10 +15,9 @@ const gitPages      = require('gulp-gh-pages');
 
 function scripts() {
   return src([
-    'node_modules/jquery/dist/jquery.js',
     'node_modules/tiny-slider/dist/tiny-slider.js',
     'node_modules/maska/dist/maska.js',
-    'node_modules/plyr/dist/plyr.polyfilled.js',
+    'node_modules/plyr/dist/plyr.polyfilled.min.js',
     'app/js/main.js'
   ])
     .pipe(babel({
