@@ -1,5 +1,6 @@
 'use strict';
 
+
 const slider = tns({
     "container": '.blog__slider',
     "items": 1,
