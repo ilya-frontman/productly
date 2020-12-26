@@ -14,6 +14,7 @@ const slider = tns({
     "navAsThumbnails": true,
     "mouseDrag": true,
     "edgePadding": 0,
+    "lazyload": true,
     "responsive": {
       820: {
         gutter: 10,
